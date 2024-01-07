@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('https://images6.alphacoders.com/705/705204.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+    
+        h1 {
+            text-align: center;
+            font-family: 'Verdana', sans-serif; /* Use Verdana font */
+        }
+    
+        h1 span {
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 30px;
+            font-weight: normal;
+            font-family: 'Monaco', monospace; /* Add this line for Monaco font */
+            color: #ccc; /* Set the text color to black */
+            text-shadow: 2px 2px 4px black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .rocket {
+            margin: 0 10px;
+            font-size: 30px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        label {
+            color: #ccc;
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        input {
+            width: 250px; /* Adjusted width for the input box */
+            height: 40px; /* Adjusted height for the input box */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 15px 20px; /* Adjusted padding for the button */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px; /* Adjusted font size for the button */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .generated-box {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out; /* Text animation */
+        }
+
+        .generated-name {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 24px; /* Adjusted font size */
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+            display: inline-block;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            border-radius: 12px; /* Rounded corners for the box */
+            animation: scaleUp 0.5s ease-in-out; /* Box animation */
+            text-transform: uppercase; /* Capitalize the text */
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><span>SUPERHERO NAME GENERATOR</span></h1>
+
+    <form method="POST" action="/generate_superhero">
+        <label for="seed_name">Enter word</label>
+        <input type="text" id="seed_name" name="seed_name" required>
+        <br>
+        <button type="submit">Find your Superhero Name</button>
+    </form>
+
+    {% if generated_name %}
+    <div class="generated-box">
+        <h2><span class="rocket">🚀</span>YOUR SUPERHERO NAME<span class="rocket">🚀</span></h2>
+        <div class="generated-name">{{ generated_name }}</div>
+    </div>
+    {% endif %}
+
+</body>
+</html>
