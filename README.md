@@ -47,16 +47,10 @@ To run this web application on your local machine, follow these steps:
 3. **View Your Superhero Name:**
    - The app will generate a unique superhero name based on the provided seed word.
 
-4. **Fun Animation:**
-   - Enjoy the fun animation that accompanies the display of your superhero name.
-
-5. **Generate More Names:**
+4. **Generate More Names:**
    - Feel free to enter different seed words and click the button again to generate more superhero names.
 
-6. **Reset the Input:**
-   - If you want to start fresh, click the "Reset" button to clear the input field.
-
-7. **Share the Fun:**
+5. **Share the Fun:**
    - Share your superhero name or the app itself with friends and have a good time exploring unique superhero identities.
 
 Feel free to experiment with different seed words and discover a variety of superhero names to suit your liking!
